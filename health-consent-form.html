@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Consent Form</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <!-- In your health-consent-form.html -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
+
+</head>
+<body>
+    <h1>Health Consent Form</h1>
+    <form id="healthConsentForm">
+        <div class="form-group">
+            <label for="dateOfCompletion">Date of Form Completion:</label>
+            <input type="date" id="dateOfCompletion" name="dateOfCompletion">
+        </div>
+
+        <div class="form-group">
+            <label for="technicianName">Technician Name:</label>
+            <input type="text" id="technicianName" name="technicianName">
+        </div>
+
+        <p>The following is either to be discussed with the Customer by the Trade, OR alternatively the device can be passed to the customer to complete.</p>
+
+        <div class="form-group">
+            <input type="checkbox" id="consentCheckbox" name="consentCheckbox" required>
+            <label for="consentCheckbox">I agree to provide the following information to Antillia Emergency Network Pty Ltd and any related party as supporting documentation in response to the claim.</label>
+        </div>
+
+        <!-- Dropdown fields and additional text inputs -->
+        <div class="form-group">
+            <label for="allergiesDropdown">Does any resident have known allergies?</label>
+            <select id="allergiesDropdown" name="allergies">
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+            <input type="text" id="specifyAllergies" name="specifyAllergies" style="display: none;" placeholder="Specify allergies">
+        </div>
+        
+        <div class="form-group">
+            <label for="chemicalSensitivityDropdown">Does any resident have any sensitivity to chemicals?</label>
+            <select id="chemicalSensitivityDropdown" name="chemicalSensitivity">
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+            <input type="text" id="specifyChemicalSensitivity" name="specifyChemicalSensitivity" style="display: none;" placeholder="Specify sensitivity">
+        </div>
+        
+        <div class="form-group">
+            <label for="respiratoryProblemsDropdown">Are there any residents with respiratory problems?</label>
+            <select id="respiratoryProblemsDropdown" name="respiratoryProblems">
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="immuneSystemDropdown">Are there any residents with a deficient immune system?</label>
+            <select id="immuneSystemDropdown" name="immuneSystem">
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="additionalInfoDropdown">Is there anything else you wish to let us know about your health or our services?</label>
+            <select id="additionalInfoDropdown" name="additionalInfo">
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+            <input type="text" id="specifyAdditionalInfo" name="specifyAdditionalInfo" style="display: none;" placeholder="Specify information">
+        </div>
+        
+
+        <div class="form-group">
+            <label for="customerSignature">Customer's Signature:</label>
+            <input type="text" id="customerSignature" name="customerSignature">
+        </div>
+        <!-- Add this in your form where the signature should be -->
+        <div class="form-group">
+            <label for="signature-pad">Customer's Signature:</label>
+            <canvas id="signature-pad" width="400" height="200"></canvas>
+        </div>
+
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="health-consent-form.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
