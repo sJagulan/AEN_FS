@@ -160,3 +160,12 @@ input[type="text"][style*="display:block;"] {
     display: block;
     margin-top: 10px;
 }
+
+/*logo*/
+#logo {
+    display: block;
+    margin: 0 auto; /* Center the logo */
+    max-width: 200px; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+    padding-bottom: 20px; /* Space below the logo */
+}
